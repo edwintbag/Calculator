@@ -1,0 +1,154 @@
+
+
+
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --btn-bg: #f2f2f2;
+  --btn-hover: #dddddd;
+  --btn-active: #cccccc;
+}
+
+.dark-mode {
+  --bg-color: #1e1e2f;
+  --text-color: #ffffff;
+  --btn-bg: #34344a;
+  --btn-hover: #50505f;
+  --btn-active: #2a2a3d;
+}
+
+.calculator-container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.theme-toggle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.theme-toggle button {
+  background: var(--btn-bg);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.theme-toggle button:hover {
+  background: var(--btn-hover);
+}
+
+.calculator {
+  background: var(--btn-bg);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.display {
+  margin-bottom: 10px;
+}
+
+.display input {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 10px;
+  border: none;
+  background: none;
+  color: var(--text-color);
+  outline: none;
+  text-align: right;
+}
+
+.buttons, .memory {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  background: var(--btn-bg);
+  border: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.history {
+  background: var(--btn-bg);
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.history h2 {
+  margin-bottom: 5px;
+}
+
+.history ul {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+
+.operator {
+  background: #ff6464;
+  color: white;
+}
+
+.equals {
+  background: #53c653;
+  grid-column: span 2;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.clear {
+  background: #ff3333;
+}
+
+@media (max-width: 768px) {
+  .calculator {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .display input {
+    font-size: 1.5rem;
+  }
+}

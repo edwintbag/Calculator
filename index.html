@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <div class="theme-toggle">
+      <button id="theme-toggle-btn">🌙 Dark Mode</button>
+    </div>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" id="result" placeholder="0" disabled />
+      </div>
+      <div class="memory">
+        <button class="btn" onclick="memoryAdd()">M+</button>
+        <button class="btn" onclick="memorySubtract()">M-</button>
+        <button class="btn" onclick="memoryRecall()">MR</button>
+        <button class="btn" onclick="memoryClear()">MC</button>
+      </div>
+      <div class="buttons">
+        <!-- Scientific and Basic Functions -->
+        <button class="btn" onclick="appendValue('sin(')">sin</button>
+        <button class="btn" onclick="appendValue('cos(')">cos</button>
+        <button class="btn" onclick="appendValue('tan(')">tan</button>
+        <button class="btn operator" onclick="appendValue('^')">xⁿ</button>
+        <button class="btn" onclick="appendValue('sqrt(')">√</button>
+        <button class="btn" onclick="appendValue('log(')">log</button>
+        <button class="btn" onclick="appendValue('ln(')">ln</button>
+        <button class="btn operator" onclick="appendValue('(')">(</button>
+        <button class="btn operator" onclick="appendValue(')')">)</button>
+        <button class="btn clear" onclick="clearDisplay()">AC</button>
+        <button class="btn" onclick="deleteLast()">DEL</button>
+        <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+        <button class="btn" onclick="appendValue('7')">7</button>
+        <button class="btn" onclick="appendValue('8')">8</button>
+        <button class="btn" onclick="appendValue('9')">9</button>
+        <button class="btn operator" onclick="appendValue('*')">×</button>
+        <button class="btn" onclick="appendValue('4')">4</button>
+        <button class="btn" onclick="appendValue('5')">5</button>
+        <button class="btn" onclick="appendValue('6')">6</button>
+        <button class="btn operator" onclick="appendValue('-')">−</button>
+        <button class="btn" onclick="appendValue('1')">1</button>
+        <button class="btn" onclick="appendValue('2')">2</button>
+        <button class="btn" onclick="appendValue('3')">3</button>
+        <button class="btn operator" onclick="appendValue('+')">+</button>
+        <button class="btn zero" onclick="appendValue('0')">0</button>
+        <button class="btn" onclick="appendValue('.')">.</button>
+        <button class="btn equals" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <div class="history">
+      <h2>History</h2>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
